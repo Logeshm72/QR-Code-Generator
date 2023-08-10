@@ -1,0 +1,30 @@
+  <template>
+  <lightning-card icon-name="standard:account" variant="base">
+    <div slot="title">
+      QR Code Generator
+    </div>
+    <div slot="actions">
+      <lightning-button 
+      variant="brand"
+      label="Generate QR Code" 
+      onclick={handleClick} 
+    ></lightning-button>
+    </div>
+    <div slot="footer">
+  
+    </div>
+    <div>
+      <!-- Card Body  -->
+      <lightning-input
+      lwc:ref="input_lightning" 
+        type="text"
+        label="Enter some text"
+      ></lightning-input>
+      
+    </div>
+    <br></br>
+    <template lwc:if={imgSrc}>
+      <img src={imgSrc} alt="QR Code"></img>
+    </template>
+  </lightning-card>
+</template>
